@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="XDP App :: Parcel Tracking">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>XDP App :: Unsupported Browser</title>
+		<link href="assets/css/index.css" rel="stylesheet">
+		<link href="assets/css/all.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="unsupported">
+			<!-- Warning -->
+			<div class="warning">
+				<i class="fas fa-exclamation-triangle"></i>Unfortunately we no longer support your current web browser
+			</div>
+			<!-- This of supported browsers -->
+			<h1>Supported browsers</h1>
+			<p>We design to support the latest web browsers. We support the current versions of <a href="https://www.google.com/chrome/" target="_parent">Chrome</a>, <a href="http://www.mozilla.org/firefox/" target="_parent">Firefox</a>, <a href="http://www.apple.com/safari/" target="_parent">Safari</a>, and <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" target="_parent">Microsoft Edge</a>.</p>
+			<hr>
+			<!-- Microsoft Edge link -->
+			<p id="edge-installed" style="display: none;">You appear to be running Microsoft Windows 10 and already have Microsoft Edge installed; <a id="edge-link" href="microsoft-edge:http://deliveryx">open in Microsoft Edge</a>.</p>
+		</div>
+		<script>
+            function isWindows10() {
+				var ua = window.navigator.userAgent;
+				var w10 = ua.indexOf("Windows NT 10");
+  
+				// Check if Windows 10
+				if (w10 > 0) {
+					// Enable Microsoft Edge link
+					document.getElementById('edge-installed').style.display = "block";
+					
+					// Read parent URL
+					if (document.referrer) {
+						document.getElementById('edge-link').href = "microsoft-edge:" + document.referrer;
+					}
+				}
+			}
+			
+			document.addEventListener("DOMContentLoaded", function(event) {
+				isWindows10();
+			});
+		</script>
+	</body>
+</html>

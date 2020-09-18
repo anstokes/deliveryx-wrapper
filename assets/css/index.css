@@ -322,3 +322,40 @@ p {
 	max-width: 66%;
 	padding: 10px 10px 10px 0;
 }
+
+.unsupported {
+	padding: 10px !important;
+}
+
+.unsupported,
+.unsupported p {
+	font-size: 14px;
+}
+
+.unsupported h1 {
+	font-size: 16px;
+	margin-bottom: .5rem;
+}
+
+.unsupported p > a {
+	color: #ccc;
+	text-decoration: underline;
+}
+
+.unsupported hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.warning {
+	background-color: #fff3cd;
+	border: 1px solid #ffeeba;
+	border-radius: 0.25rem;
+	color: #856404;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.warning > i {
+	margin-right: 10px;
+}
